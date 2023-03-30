@@ -1,0 +1,24 @@
+name: publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish-base-docker-image:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Build base Docker image
+        run: |
+               docker build . --tag ghcr.io/integration-glue/glue-docker-base:latest
+               docker push ghcr.io/integration-glue/glue-docker-base:latest

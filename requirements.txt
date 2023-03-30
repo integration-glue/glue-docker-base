@@ -1,0 +1,10 @@
+# Web stuff
+gunicorn
+fastapi
+uvicorn
+pydantic
+cachetools
+asyncache
+
+# GCP Stuff
+google-cloud-logging

@@ -8,5 +8,6 @@ RUN echo "deb http://ftp.debian.org/debian buster-backports main " >> /etc/apt/s
     && rm -rf /root/.cache/  \
 	  && rm -rf /var/lib/apt/lists/*
 
+WORKDIR '/app'
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt  && rm -rf /root/.cache/ && rm -rf requirements.txt

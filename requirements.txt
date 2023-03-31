@@ -5,6 +5,7 @@ uvicorn
 pydantic
 cachetools
 asyncache
+httpx
 
 # GCP Stuff
 google-cloud-logging

@@ -6,6 +6,7 @@ pydantic
 cachetools
 asyncache
 httpx
+jinja2
 
 # GCP Stuff always installed
 google-cloud-logging

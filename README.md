@@ -1,4 +1,3 @@
 # glue-docker-base
 
 Activity
-
